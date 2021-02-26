@@ -96,15 +96,21 @@
     <TextView
         android:id="@+id/posts_count_text"
         style="@style/profile_text_count"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="67dp"
         android:text="50"
-        tools:layout_editor_absoluteX="160dp"
+        app:layout_constraintEnd_toStartOf="@+id/followers_count_text"
+        app:layout_constraintStart_toEndOf="@+id/profile_img"
         tools:layout_editor_absoluteY="71dp" />
 
     <TextView
         android:id="@+id/posts_text"
         style="@style/profile_text"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="48dp"
         android:text="posts"
-        tools:layout_editor_absoluteX="161dp"
+        app:layout_constraintEnd_toStartOf="@+id/followers_text"
+        app:layout_constraintStart_toEndOf="@+id/profile_img"
         tools:layout_editor_absoluteY="102dp" />
 
     <TextView
