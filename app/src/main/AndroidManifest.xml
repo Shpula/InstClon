@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddActivity"/>
+        <activity android:name=".EditProfileActivity"/>
         <activity android:name=".SearchActivity"/>
         <activity android:name=".LikeActivity"/>
         <activity android:name=".HomeActivity"/>

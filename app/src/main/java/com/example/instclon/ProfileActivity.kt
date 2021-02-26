@@ -14,5 +14,10 @@ class ProfileActivity : BaseActivity(4) {
         setContentView(R.layout.activity_profile)
         setupBottomNavigation()
         Log.d(TAG, "onCreate")
+
+        edit_profile_button.setOnClickListener {
+            val intent = Intent(this, EditProfileActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
