@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLoyout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="horizontal|vertical"
+    android:fadingEdgeLength="4dp"
+    android:persistentDrawingCache="none"
+    android:requiresFadingEdge="none"
+    app:layout_dodgeInsetEdges="none"
+    app:layout_insetEdge="none"
+    tools:context=".ProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/whiteish"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="16dp">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center|left"
+                android:text="S4enok"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="53dp"
+                android:padding="7dp"
+                android:src="@drawable/ic_acc_more"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/user_name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.333" />
+
+            <ImageView
+                android:id="@+id/ic_more"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_more"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ic_add"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ic_more"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:src="@mipmap/ic_profile"
+        app:civ_border_width="2dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/edit_profile_button"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topToolBar" />
+
+    <TextView
+        android:id="@+id/posts_count_text"
+        style="@style/profile_text_count"
+        android:text="50"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="71dp" />
+
+    <TextView
+        android:id="@+id/posts_text"
+        style="@style/profile_text"
+        android:text="posts"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="102dp" />
+
+    <TextView
+        android:id="@+id/followers_count_text"
+        style="@style/profile_text_count"
+        android:text="122"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <TextView
+        android:id="@+id/followers_text"
+        style="@style/profile_text"
+        android:text="followers"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="102dp" />
+
+    <TextView
+        android:id="@+id/following_count_text"
+        style="@style/profile_text_count"
+        android:text="35"
+        tools:layout_editor_absoluteX="318dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <TextView
+        android:id="@+id/following_text"
+        style="@style/profile_text"
+        android:text="following"
+        tools:layout_editor_absoluteX="318dp"
+        tools:layout_editor_absoluteY="102dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/edit_profile_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:background="@drawable/button_bg"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="14sp"
+        android:text="Edit Profile"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toEndOf="@+id/profile_img" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/whiteish"
+        android:visibility="visible"
+        app:itemBackground="@color/white"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/main_inst_color"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu"
+        tools:visibility="visible" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
