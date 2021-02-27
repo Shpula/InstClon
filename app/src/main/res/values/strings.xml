@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">InstClon</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="create_account_sign_up">Don\'t have a NikoNiko account? <b>Sign up</b></string>
 </resources>
